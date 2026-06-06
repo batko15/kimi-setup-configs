@@ -1,0 +1,11 @@
+{
+  "agent_name": "TTD-Deep-Research",
+  "description": "Test-Time Diffusion Deep Research (TTD-DR) implementation. AI-powered research assistant integrated directly with Kimi API for deep data mining.",
+  "repository": "https://github.com/gogototo99/TTD-DR-Research",
+  "setup": [
+    "git clone https://github.com/gogototo99/TTD-DR-Research.git",
+    "cd TTD-DR-Research",
+    "npm install"
+  ],
+  "run": "npm start -- --provider=moonshot"
+}

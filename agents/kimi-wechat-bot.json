@@ -1,0 +1,11 @@
+{
+  "agent_name": "Kimi-WeChat-Robot",
+  "description": "An autonomous chatting robot on WeChat powered by the Kimi API and wxauto.",
+  "repository": "https://github.com/MoMoJee/WeChatRobot",
+  "setup": [
+    "git clone https://github.com/MoMoJee/WeChatRobot.git",
+    "cd WeChatRobot",
+    "pip install wxauto requests"
+  ],
+  "run": "python main.py --use_kimi=true"
+}
