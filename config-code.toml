@@ -3,12 +3,9 @@ default_thinking = true
 
 [providers."managed:kimi-code"]
 type = "kimi"
-api_key = ""
+api_key = "sk-kimi-uVbo2OFv14bWYQsFgZveTNq40l8r83HpoTgZyH9z5AUUV0WZ8d8v5ozh4ZdwvBOb"
 base_url = "https://api.kimi.com/coding/v1"
 
-[providers."managed:kimi-code".oauth]
-storage = "file"
-key = "oauth/kimi-code"
 
 [models."kimi-code/kimi-for-coding"]
 provider = "managed:kimi-code"
@@ -19,19 +16,13 @@ display_name = "Kimi-k2.6"
 
 [services.moonshot_search]
 base_url = "https://api.kimi.com/coding/v1/search"
-api_key = ""
+api_key = "sk-kimi-uVbo2OFv14bWYQsFgZveTNq40l8r83HpoTgZyH9z5AUUV0WZ8d8v5ozh4ZdwvBOb"
 
-[services.moonshot_search.oauth]
-storage = "file"
-key = "oauth/kimi-code"
 
 [services.moonshot_fetch]
 base_url = "https://api.kimi.com/coding/v1/fetch"
-api_key = ""
+api_key = "sk-kimi-uVbo2OFv14bWYQsFgZveTNq40l8r83HpoTgZyH9z5AUUV0WZ8d8v5ozh4ZdwvBOb"
 
-[services.moonshot_fetch.oauth]
-storage = "file"
-key = "oauth/kimi-code"
 
 [[plugins]]
 path = "/data/data/com.termux/files/home/kimi-code/plugins/official/kimi-datasource"
@@ -44,12 +35,12 @@ command = "npx"
 args = [ "-y", "@modelcontextprotocol/server-filesystem", "/data/data/com.termux/files/home" ]
 
 [mcp_servers.git]
-command = "npx"
-args = [ "-y", "@modelcontextprotocol/server-git", "--repository", "/data/data/com.termux/files/home" ]
+command = "uvx"
+args = [ "mcp-server-git", "--repository", "/data/data/com.termux/files/home" ]
 
 [mcp_servers.fetch]
-command = "npx"
-args = [ "-y", "@modelcontextprotocol/server-fetch" ]
+command = "uvx"
+args = [ "mcp-server-fetch" ]
 
 [mcp_servers.sequential-thinking]
 command = "npx"
@@ -62,11 +53,3 @@ args = [ "-y", "@modelcontextprotocol/server-memory" ]
 [mcp_servers.everything]
 command = "npx"
 args = [ "-y", "@modelcontextprotocol/server-everything" ]
-
-[mcp_servers.brave-search]
-command = "npx"
-args = [ "-y", "@modelcontextprotocol/server-brave-search" ]
-skills_dirs = [ "/data/data/com.termux/files/home/kimi-code/.agents/skills", "/data/data/com.termux/files/home/kimi-cli/.agents/skills" ]
-
-[mcp_servers.brave-search.env]
-BRAVE_API_KEY = ""
