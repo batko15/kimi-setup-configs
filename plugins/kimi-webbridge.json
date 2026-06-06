@@ -1,0 +1,8 @@
+{
+  "name": "kimi-webbridge",
+  "description": "A browser extension for AI agents. It clicks, fills, navigates, and extracts, letting your agent take over browsing tasks: trending research, job hunting, flight comparison, and more.",
+  "repository": "https://www.kimi.com/products/",
+  "setup": "npm install -g @moonshotai/kimi-webbridge-mcp",
+  "usage": "kimi-webbridge start --headless=false",
+  "mcp_enabled": true
+}

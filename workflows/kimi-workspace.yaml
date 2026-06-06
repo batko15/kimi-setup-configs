@@ -1,0 +1,12 @@
+name: "Kimi Workspace Automation"
+description: "An all-in-one AI workspace workflow. Integrates deep research, creates slides, sheets, docs, and websites using agentic capabilities built right in."
+triggers:
+  - on: "command"
+    command: "kimi-workspace start"
+stages:
+  - id: deep_research
+    agent: kimi-k2.5-multimodal
+    action: "Conduct comprehensive web research on the given topic."
+  - id: generate_assets
+    agent: kimi-work-swarm
+    action: "Generate slides, sheets, and docs based on research."

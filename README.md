@@ -180,8 +180,13 @@ Based on the official [Kimi Products](https://www.kimi.com/products/) offerings,
 
 ### 🌟 Enterprise & Multimodal Agents
 - **Kimi-Enterprise-Agent**: Configured for Kimi Enterprise/Workplace with strict Data Loss Prevention (DLP), SSO authentication, and Private Model Hosting compatibility. (`agents/kimi-enterprise-agent.json`)
-- **Kimi-K2.5-Multimodal**: Advanced agent leveraging the massive Kimi-K2.5 model for vision, document parsing, and advanced reasoning. (`agents/kimi-k2.5-vision.json`)
+- **Kimi-K2.5-Frontier**: Integration with Kimi-K2.5 and Kimi-K2 frontier models. Access built-in tools and intelligence via the Kimi Platform API. (`agents/kimi-k2.5-vision.json`)
+- **Kimi-Work-Swarm**: An AI desktop agent with Agent Swarm. Connects to local files, automates scheduled tasks, and operates across the web. (`agents/kimi-work-swarm.json`)
 
 ### 🔗 Official SDK & Platform Plugins
 - **Kimi-Agent-SDK-Bridge**: A bridge plugin connecting the official Moonshot Kimi Agent SDK directly to your local development environment via MCP. (`plugins/kimi-agent-sdk-bridge.json`)
-- **Kimi Open Platform API Sync**: An automated workflow that syncs your local setups with the official Moonshot API (`https://api.moonshot.cn`), tracking usage stats and alerting on low token balances. (`workflows/kimi-open-platform-sync.yaml`)
+- **Kimi-WebBridge**: A browser extension for AI agents. It clicks, fills, navigates, and extracts for trending research and job hunting. (`plugins/kimi-webbridge.json`)
+
+### 🌐 Official Platform Workflows
+- **Kimi Workspace Automation**: An all-in-one AI workspace workflow for deep research, slides, and sheets. (`workflows/kimi-workspace.yaml`)
+- **Kimi Open Platform API Sync**: An automated workflow that syncs your local setups with the official Moonshot API (`https://api.moonshot.cn`), tracking usage stats. (`workflows/kimi-open-platform-sync.yaml`)

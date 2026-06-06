@@ -1,0 +1,10 @@
+{
+  "agent_name": "Kimi-Work-Swarm",
+  "description": "An AI desktop with Agent Swarm and pre-integrated deep data sources. Connects to local files, automates scheduled tasks, and operates across the web.",
+  "repository": "https://www.kimi.com/products/",
+  "setup": [
+    "npm install -g @moonshotai/kimi-work"
+  ],
+  "run": "kimi-work daemon --enable-local-files --enable-swarm",
+  "capabilities": ["Agent Swarm", "Local File Access", "Scheduled Tasks", "Deep Data Sources"]
+}
