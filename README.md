@@ -1,6 +1,8 @@
-# 🚀 Kimi Setup & Configurations Guide
+# 🚀 Kimi Setup & Configurations Guide (Optimized & Supercharged)
 
-This repository contains setup instructions, script snippets, and configurations for running Kimi (including **kimi-code** and **kimi-cli**) across **Windows**, **Big Linux (Manjaro/Arch-based)**, and **Termux**.
+This repository contains optimized setup instructions, script snippets, and configurations for running Kimi (including **kimi-code** and **kimi-cli**) across **Windows**, **Big Linux (Manjaro/Arch-based)**, and **Termux**.
+
+It has been enhanced with **Supercharged MCP servers** (GitHub integration, browser automation with Puppeteer, DB clients like PostgreSQL & SQLite) and workflow tips.
 
 ---
 
@@ -19,7 +21,7 @@ This repository contains setup instructions, script snippets, and configurations
    npm install -g pnpm
    ```
 
-### Installation
+### Installation & Launch Scripts
 Clone the repositories and install dependencies:
 ```powershell
 # Setup Kimi Code (TypeScript version)
@@ -39,13 +41,9 @@ uv sync --no-dev
 uv run --no-dev --package kimi-cli kimi
 ```
 
-### Configuration Paths
-- **Kimi Code**: `%USERPROFILE%\.kimi-code\config.toml` & `%USERPROFILE%\.kimi-code\mcp.json`
-- **Kimi CLI**: `%USERPROFILE%\.kimi\config.toml` & `%USERPROFILE%\.kimi\mcp.json`
-
 ---
 
-## 🐧 2. Big Linux Setup (Manjaro / Arch / Debian)
+## 🐧 2. Big Linux Setup (Manjaro / Arch / Debian / BigLinux)
 
 ### Prerequisites
 Install basic tools, Python, Node.js, and package managers:
@@ -68,8 +66,7 @@ sudo npm install -g pnpm
 # Setup Kimi Code
 git clone https://github.com/MoonshotAI/kimi-code.git
 cd kimi-code
-pnpm install
-pnpm build
+pnpm install && pnpm build
 # Run CLI
 pnpm dev:cli
 
@@ -81,10 +78,6 @@ uv sync --no-dev
 # Run CLI
 uv run --no-dev --package kimi-cli kimi
 ```
-
-### Configuration Paths
-- **Kimi Code**: `~/.kimi-code/config.toml` & `~/.kimi-code/mcp.json`
-- **Kimi CLI**: `~/.kimi/config.toml` & `~/.kimi/mcp.json`
 
 ---
 
@@ -102,7 +95,6 @@ npm install -g pnpm
 ```
 
 ### Installation
-Ensure that `pyinstaller` is skipped or compiled dynamically since prebuilt binary bootloaders are not available on Termux arm64:
 ```bash
 # Setup Kimi Code
 git clone https://github.com/MoonshotAI/kimi-code.git && cd kimi-code
@@ -110,7 +102,7 @@ pnpm install && pnpm build
 # Run CLI
 pnpm dev:cli
 
-# Setup Kimi CLI (avoiding pyinstaller compiling checks by building only app requirements)
+# Setup Kimi CLI
 cd ..
 git clone https://github.com/MoonshotAI/kimi-cli.git && cd kimi-cli
 uv sync --no-dev
@@ -118,47 +110,16 @@ uv sync --no-dev
 uv run --no-dev --package kimi-cli kimi
 ```
 
-### Configuration Paths
-- **Kimi Code**: `/data/data/com.termux/files/home/.kimi-code/config.toml`
-- **Kimi CLI**: `/data/data/com.termux/files/home/.kimi/config.toml`
-
 ---
 
-## 🛠️ MCP Configuration Template (`mcp.json`)
-Create this file at `~/.kimi/mcp.json` or `%USERPROFILE%\.kimi\mcp.json` (also copy to `.kimi-code/mcp.json`):
+## 🛠️ Supercharged MCP Configuration (`mcp-supercharged.json`)
+You can use `mcp-supercharged.json` for advanced workflows. 
 
-```json
-{
-  "mcpServers": {
-    "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "<replace_with_home_directory_path>"]
-    },
-    "memory": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"]
-    },
-    "sequential-thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    },
-    "fetch": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch"]
-    },
-    "git": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "<replace_with_home_directory_path>"]
-    },
-    "everything": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-everything"]
-    },
-    "brave-search": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
-      "env": { "BRAVE_API_KEY": "YOUR_BRAVE_API_KEY" }
-    }
-  }
-}
-```
+### Highlighted Additions:
+1. **GitHub MCP**: Let Kimi read issues, create repositories, and commit directly to GitHub (requires `GITHUB_PERSONAL_ACCESS_TOKEN`).
+2. **Puppeteer MCP**: Browser automation so Kimi can browse dynamic JavaScript-heavy websites.
+3. **SQLite & Postgres MCPs**: Run direct database commands and browse schemas.
+
+Copy the configurations to:
+- **Kimi Code**: `~/.kimi-code/mcp.json` (or `%USERPROFILE%\.kimi-code\mcp.json`)
+- **Kimi CLI**: `~/.kimi/mcp.json` (or `%USERPROFILE%\.kimi\mcp.json`)
