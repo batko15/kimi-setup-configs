@@ -1,0 +1,8 @@
+{
+  "name": "kimi-discord-bridge",
+  "description": "A plugin to connect Kimi directly to a Discord server. Kimi can read channels, analyze images, and respond to pings.",
+  "repository": "https://github.com/MoMoJee/kimi-discord-bridge",
+  "setup": "npm install -g kimi-discord-bridge",
+  "usage": "kimi-discord --token YOUR_BOT_TOKEN",
+  "mcp_enabled": true
+}

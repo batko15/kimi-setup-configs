@@ -1,0 +1,15 @@
+name: "Automated PR Review"
+description: "Workflow that triggers a Kimi-Auto-Coder agent to review any new Pull Requests on GitHub."
+triggers:
+  - on: "github_webhook"
+    event: "pull_request"
+stages:
+  - id: fetch_diff
+    agent: kimi-cli
+    action: "Fetch PR diff using GitHub MCP"
+  - id: analyze_code
+    agent: kimi-k2-thinking
+    prompt: "Review the code diff for security flaws, performance bottlenecks, and style violations."
+  - id: post_comment
+    agent: kimi-cli
+    action: "Post the review comments back to the PR via GitHub MCP"

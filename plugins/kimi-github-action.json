@@ -1,0 +1,8 @@
+{
+  "name": "kimi-github-action",
+  "description": "GitHub Action to run Kimi Code on every Pull Request for automated code review and security audits.",
+  "repository": "https://github.com/whitesmith/kimi-github-action",
+  "setup": "Add to .github/workflows/kimi-review.yml",
+  "usage": "uses: whitesmith/kimi-github-action@v1",
+  "mcp_enabled": false
+}

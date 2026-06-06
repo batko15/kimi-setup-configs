@@ -1,0 +1,11 @@
+{
+  "agent_name": "Kimi-Auto-Coder",
+  "description": "Autonomous software engineer powered by Kimi. Can create full-stack web applications from zero to deployment.",
+  "repository": "https://github.com/Doriandarko/kimi-auto-coder",
+  "setup": [
+    "git clone https://github.com/Doriandarko/kimi-auto-coder.git",
+    "cd kimi-auto-coder",
+    "pnpm install"
+  ],
+  "run": "pnpm run start --task 'build a web app'"
+}

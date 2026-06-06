@@ -149,3 +149,26 @@ You can use `mcp-supercharged.json` for advanced workflows.
 Copy the configurations to:
 - **Kimi Code**: `~/.kimi-code/mcp.json` (or `%USERPROFILE%\.kimi-code\mcp.json`)
 - **Kimi CLI**: `~/.kimi/mcp.json` (or `%USERPROFILE%\.kimi\mcp.json`)
+
+---
+
+## 🚀 MASSIVE EXPANSION: Agents, Plugins, Skills, & Workflows
+
+In the latest update, we have done a "Deep Web Search" expansion to provide an incredible suite of capabilities:
+
+### 🤖 New Agents
+- **Kimi-SEO-Expert**: Advanced agentic SEO analysis (`agents/kimi-seo-expert.json`)
+- **Kimi-Auto-Coder**: Autonomous software engineer for zero-to-deployment web apps (`agents/kimi-auto-coder.json`)
+- **Kimi-Wechat-Bot**: WeChat integration
+- **Kimi-Deep-Research**: Long-running research analyst
+
+### 🔌 New Plugins
+- **Kimi-Discord-Bridge**: Direct Discord bot integration via MCP (`plugins/kimi-discord-bridge.json`)
+- **Kimi-GitHub-Action**: Run Kimi Code automatically in CI/CD (`plugins/kimi-github-action.json`)
+- **Kimi-API-Rotator**: API token load balancing
+
+### 🧠 New Skills
+- **SKILL-vision**: Teach Kimi how to parse visual UI/Architecture and emit Mermaid JS diagrams (`skills/SKILL-vision.md`)
+
+### 🔄 New Workflows
+- **Automated PR Review**: Kimi Auto-Coder triggers on GitHub Webhooks to review PRs (`workflows/ci-cd-review.yaml`)

@@ -1,0 +1,9 @@
+{
+  "agent_name": "Kimi-SEO-Expert",
+  "description": "An advanced agentic SEO analyzer that uses Kimi's deep reasoning to audit websites, analyze CWV, and check E-E-A-T signals.",
+  "repository": "https://github.com/LLM-Red-Team/kimi-seo",
+  "setup": [
+    "npm install -g kimi-seo-expert"
+  ],
+  "run": "kimi-seo analyze --url https://example.com --model kimi-k2-thinking"
+}
