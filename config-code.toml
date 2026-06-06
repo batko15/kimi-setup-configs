@@ -35,12 +35,12 @@ command = "npx"
 args = [ "-y", "@modelcontextprotocol/server-filesystem", "/data/data/com.termux/files/home" ]
 
 [mcp_servers.git]
-command = "uvx"
-args = [ "mcp-server-git", "--repository", "/data/data/com.termux/files/home" ]
+command = "mcp-server-git"
+args = [ "--repository", "/data/data/com.termux/files/home" ]
 
 [mcp_servers.fetch]
-command = "uvx"
-args = [ "mcp-server-fetch" ]
+command = "mcp-server-fetch"
+args = []
 
 [mcp_servers.sequential-thinking]
 command = "npx"
@@ -53,3 +53,7 @@ args = [ "-y", "@modelcontextprotocol/server-memory" ]
 [mcp_servers.everything]
 command = "npx"
 args = [ "-y", "@modelcontextprotocol/server-everything" ]
+extra_skill_dirs = [
+  "/data/data/com.termux/files/home/kimi-code/.agents/skills",
+  "/data/data/com.termux/files/home/kimi-cli/.agents/skills"
+]
