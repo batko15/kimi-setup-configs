@@ -1,0 +1,8 @@
+{
+  "name": "kimi-cc",
+  "description": "Kimi Claude Code Driver - Uses Kimi's latest model to drive Claude Code.",
+  "repository": "https://github.com/LLM-Red-Team/kimi-cc",
+  "setup": "npm install -g kimi-cc",
+  "usage": "kimi-cc start --model kimi-k2.5",
+  "mcp_enabled": true
+}

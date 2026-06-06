@@ -1,0 +1,11 @@
+{
+  "agent_name": "Kimi-Writer",
+  "description": "AI writing agent powered by kimi-k2-thinking. Autonomously creates novels and stories with deep reasoning.",
+  "repository": "https://github.com/Doriandarko/kimi-writer",
+  "setup": [
+    "git clone https://github.com/Doriandarko/kimi-writer.git",
+    "cd kimi-writer",
+    "pip install -r requirements.txt"
+  ],
+  "run": "python writer.py --model kimi-k2-thinking"
+}

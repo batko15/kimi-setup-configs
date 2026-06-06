@@ -1,0 +1,20 @@
+name: "Kimi Autopilot Workflow"
+description: "A continuous loop workflow that delegates tasks to Kimi-Writer or Kimi-CC based on intent."
+triggers:
+  - on: "command"
+    regex: "/autopilot"
+stages:
+  - id: analyze
+    agent: kimi-code
+    prompt: "Analyze the user request and determine the target agent."
+  - id: delegate
+    condition: "intent == 'write'"
+    agent: Kimi-Writer
+    action: "Generate document"
+  - id: execute_code
+    condition: "intent == 'code'"
+    agent: kimi-cc
+    action: "Drive Claude Code for development"
+  - id: verify
+    agent: kimi-cli
+    prompt: "Verify the output of the delegated agent and report back to user."
