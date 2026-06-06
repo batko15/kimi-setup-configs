@@ -1,0 +1,8 @@
+{
+  "name": "kimi-agent-sdk-bridge",
+  "description": "A plugin to bridge the official Moonshot Kimi Agent SDK with your local development environment via MCP.",
+  "repository": "https://github.com/MoonshotAI/kimi-agent-sdk",
+  "setup": "npm install -g @moonshotai/kimi-agent-sdk-bridge",
+  "usage": "kimi-agent-sdk-bridge --port 3000",
+  "mcp_enabled": true
+}

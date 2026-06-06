@@ -1,0 +1,12 @@
+name: "Kimi Open Platform API Sync"
+description: "Workflow to synchronize local Kimi setups with the official Kimi Open Platform API limits and usage stats."
+triggers:
+  - on: "cron"
+    schedule: "0 * * * *" # Every hour
+stages:
+  - id: check_api_limits
+    agent: kimi-cli
+    action: "Fetch usage stats from https://api.moonshot.cn/v1/users/me"
+  - id: alert_on_low_balance
+    agent: kimi-cli
+    action: "If balance < 10, send a push notification or Telegram message."

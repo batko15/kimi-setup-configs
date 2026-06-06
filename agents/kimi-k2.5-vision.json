@@ -1,0 +1,11 @@
+{
+  "agent_name": "Kimi-K2.5-Multimodal",
+  "description": "Advanced agent utilizing the Kimi-K2.5 model for multimodal reasoning (vision + text + document parsing).",
+  "repository": "https://github.com/MoonshotAI/Kimi-K2.5",
+  "setup": [
+    "git clone https://github.com/MoonshotAI/Kimi-K2.5.git",
+    "cd Kimi-K2.5 && pip install -r requirements.txt"
+  ],
+  "run": "python agent_k2_5.py --enable-vision --enable-docs",
+  "capabilities": ["Vision", "PDF parsing", "Advanced Reasoning"]
+}

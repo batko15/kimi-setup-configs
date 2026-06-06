@@ -1,0 +1,10 @@
+{
+  "agent_name": "Kimi-Enterprise-Agent",
+  "description": "An agent configured for Kimi Enterprise/Workplace environments. Includes strict data privacy controls and role-based access for Moonshot AI Enterprise.",
+  "repository": "https://github.com/MoonshotAI/kimi-enterprise",
+  "setup": [
+    "npm install -g @moonshotai/kimi-enterprise-agent"
+  ],
+  "run": "kimi-enterprise start --workspace 'MyCompany'",
+  "capabilities": ["Data Loss Prevention (DLP)", "SSO Auth", "Private Model Hosting"]
+}

@@ -172,3 +172,16 @@ In the latest update, we have done a "Deep Web Search" expansion to provide an i
 
 ### 🔄 New Workflows
 - **Automated PR Review**: Kimi Auto-Coder triggers on GitHub Webhooks to review PRs (`workflows/ci-cd-review.yaml`)
+
+---
+
+## 🏢 OFFICIAL KIMI PRODUCTS INTEGRATIONS
+Based on the official [Kimi Products](https://www.kimi.com/products/) offerings, the following enterprise-grade setups have been added:
+
+### 🌟 Enterprise & Multimodal Agents
+- **Kimi-Enterprise-Agent**: Configured for Kimi Enterprise/Workplace with strict Data Loss Prevention (DLP), SSO authentication, and Private Model Hosting compatibility. (`agents/kimi-enterprise-agent.json`)
+- **Kimi-K2.5-Multimodal**: Advanced agent leveraging the massive Kimi-K2.5 model for vision, document parsing, and advanced reasoning. (`agents/kimi-k2.5-vision.json`)
+
+### 🔗 Official SDK & Platform Plugins
+- **Kimi-Agent-SDK-Bridge**: A bridge plugin connecting the official Moonshot Kimi Agent SDK directly to your local development environment via MCP. (`plugins/kimi-agent-sdk-bridge.json`)
+- **Kimi Open Platform API Sync**: An automated workflow that syncs your local setups with the official Moonshot API (`https://api.moonshot.cn`), tracking usage stats and alerting on low token balances. (`workflows/kimi-open-platform-sync.yaml`)
