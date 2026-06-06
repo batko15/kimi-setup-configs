@@ -1,14 +1,14 @@
 # 🚀 Kimi Setup & Configurations Guide (Optimized & Supercharged)
 
-This repository contains optimized setup instructions, script snippets, and configurations for running Kimi (including **kimi-code** and **kimi-cli**) across **Windows**, **Big Linux (Manjaro/Arch-based)**, and **Termux**.
+This repository contains optimized setup instructions, script snippets, and configurations for running Kimi (including **kimi-code**, **kimi-cli**, and **Kimi Desktop**) across **Windows**, **Big Linux (Manjaro/Arch-based)**, and **Termux**.
 
-It has been enhanced with **Supercharged MCP servers** (GitHub integration, browser automation with Puppeteer, DB clients like PostgreSQL & SQLite) and workflow tips.
+It has been enhanced with **Supercharged MCP servers** (GitHub integration, browser automation with Puppeteer, DB clients like PostgreSQL & SQLite) and **native Desktop client packaging instructions**.
 
 ---
 
 ## 💻 1. Windows Setup
 
-### Prerequisites
+### Kimi Code & CLI Prerequisites
 1. Install **Git**: [git-scm.com](https://git-scm.com/)
 2. Install **Node.js (LTS)**: [nodejs.org](https://nodejs.org/)
 3. Install **Python 3.11+**: Ensure you tick "Add Python to PATH" during installation.
@@ -21,7 +21,7 @@ It has been enhanced with **Supercharged MCP servers** (GitHub integration, brow
    npm install -g pnpm
    ```
 
-### Installation & Launch Scripts
+### CLI Installation
 Clone the repositories and install dependencies:
 ```powershell
 # Setup Kimi Code (TypeScript version)
@@ -39,6 +39,16 @@ cd kimi-cli
 uv sync --no-dev
 # Run CLI
 uv run --no-dev --package kimi-cli kimi
+```
+
+### 🖥️ Kimi Desktop App (Windows)
+Create a native lightweight Windows client using Rust & Tauri wrapper tool **Pake**:
+```powershell
+# Install Pake globally
+npm install -g pake-cli
+
+# Compile Kimi web into a native Windows executable (.exe)
+pake https://kimi.moonshot.cn --name "Kimi" --icon "assets/icon.png" --width 1200 --height 800
 ```
 
 ---
@@ -61,7 +71,7 @@ source $HOME/.local/bin/env
 sudo npm install -g pnpm
 ```
 
-### Installation
+### CLI Installation
 ```bash
 # Setup Kimi Code
 git clone https://github.com/MoonshotAI/kimi-code.git
@@ -79,12 +89,28 @@ uv sync --no-dev
 uv run --no-dev --package kimi-cli kimi
 ```
 
+### 🖥️ Kimi Desktop App (Linux)
+You can compile Kimi into a native `.deb` package or AppImage:
+```bash
+# Install Pake globally
+sudo npm install -g pake-cli
+
+# Compile Kimi Web to AppImage/Debian app
+pake https://kimi.moonshot.cn --name "kimi-desktop" --width 1200 --height 800
+```
+Or use the pre-packaged community client:
+```bash
+git clone https://github.com/johnohhh1/kimi-app.git
+cd kimi-app
+npm install && npm run tauri build
+```
+
 ---
 
-## 📱 3. Termux (Android) Setup
+## 📱 3. Termux (Android Snapdragon / ARM64) Setup
 
 ### Prerequisites
-Run the following inside Termux to install toolchains:
+Run the following inside Termux to install Snapdragon arm64 compatible toolchains:
 ```bash
 pkg update && pkg upgrade -y
 pkg install -y git nodejs python python-pip clang make build-essential binutils
@@ -94,7 +120,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 npm install -g pnpm
 ```
 
-### Installation
+### CLI Installation
 ```bash
 # Setup Kimi Code
 git clone https://github.com/MoonshotAI/kimi-code.git && cd kimi-code
